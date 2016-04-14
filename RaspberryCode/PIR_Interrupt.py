@@ -19,7 +19,7 @@ GPIO.setup(ledOutPin, GPIO.OUT)
 GPIO.setup(pirInPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  
 
 def pirSensorDidChange(pin): 
-	print("Detect changed of Gas sensor to " + str(GPIO.input(pirInPin)))
+	print("Detect changed of PIR sensor to " + str(GPIO.input(pirInPin)))
 	readValue = GPIO.input(pirInPin)
 	GPIO.output(ledOutPin, readValue)
 
